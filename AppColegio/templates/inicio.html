@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+    <h1>Panel de control de usuario</h1>    
+{% endblock %}
+
+{% block contenido %}
+    <h2 class="text-center">Bienvenido/a al sistema</h2> 
+    <div class="container">
+        <!-- FILA 1-->
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">¡Hola {{ usuario.username }}!</h5>
+                      <p class="card-text">Explora nuestra web y encontrá toda la información sobre nuestros alumnos y profesores</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a> 
+    <a href="{% url 'editarPerfil' %}" class="btn btn-warning">Editar</a> 
+{% endblock %}

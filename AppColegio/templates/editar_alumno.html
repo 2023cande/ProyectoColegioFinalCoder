@@ -1,0 +1,30 @@
+{% extends  "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h2>Ingrese los datos del alumno</h2>
+
+    <form action="{% url 'editar_alumno' alumno.id %}" method="POST">
+        {% csrf_token %}
+        <p>Nombre:</p>
+        {{mi_formulario.nombre}}
+       
+        <p>Apellido</p>
+        {{mi_formulario.apellido}}
+       
+        <p>Email:</p>
+        {{mi_formulario.email}}
+
+        <br> 
+
+        <br> 
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+
+
+{% endblock %}

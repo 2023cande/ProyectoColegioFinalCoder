@@ -1,0 +1,43 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block seccion %}
+    <h1>Profesores</h1>
+    
+{% endblock %}
+
+{% block contenido %}
+
+<h3>Alta de profesor</h3>
+
+    <form action="alta_profesor" method="POST">
+
+        {% csrf_token %}
+
+        <p>Nombre:</p>
+
+        <input type="text" name="nombre" required>
+
+        <p>Apellido:</p>
+
+        <input type="text" name="apellido" required>
+
+        <p>Email:</p>
+
+        <input type="text" name="email" required>
+
+        <p>Materia:</p>
+
+        <input type="text" name="materia" required>
+
+        <br> 
+
+        <br> 
+
+        <input type="submit">
+
+    </form>
+
+{% endblock %}

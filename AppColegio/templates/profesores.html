@@ -1,0 +1,89 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+    <h1>Profesores</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<main>
+    <div class="container">
+        <!-- FILA 1-->
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/testimonials-2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Federico Rojas</h5>
+                      <p class="card-text">Profesor de Educación Física</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/testimonials-1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Isabel Puccio</h5>
+                      <p class="card-text">Profesora de Inglés</p>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/testimonials-3.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Julieta Rodriguez</h5>
+                      <p class="card-text">Profesora de Matemática</p>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+
+         <!-- FILA 2-->
+         <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/profesor-1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Julian Perez</h5>
+                      <p class="card-text">Profesor de Físico-Química</p>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/profesor-2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Micaela Gallardo</h5>
+                      <p class="card-text">Profesora de Plástica</p>
+                     
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/profesor-3.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Florencia Altamirano</h5>
+                      <p class="card-text">Profesora de Historia y Geografía</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        </tbody>
+        <br> 
+        <br>
+      </table>
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'alta_profesor' %}" class="btn btn-primary">Agregar profesor</a>
+      {% endif %}
+
+{% endblock %}
+

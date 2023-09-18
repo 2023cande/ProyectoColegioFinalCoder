@@ -1,0 +1,36 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block seccion %}
+    <h1>Entregables</h1>
+    
+{% endblock %}
+
+{% block contenido %}
+
+<h3>Agregar entrega</h3>
+
+<form action="agregar_entrega" method="POST">
+
+    {% csrf_token %}
+
+    <p>Nombre:</p>
+    <input type="text" name="nombre" required>
+
+    <p>Apellido:</p>
+    <input type="text" name="apellido" required>
+
+    <p>Fecha de entrega:</p>
+    <input type="date" name="fecha" required> 
+
+    <br> 
+    <br>
+    {% if request.user.is_authenticated %}
+    <input type="submit" value="Enviar Entrega">
+    {% endif %}
+</form>
+
+{% endblock %}
+

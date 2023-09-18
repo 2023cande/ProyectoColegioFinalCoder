@@ -1,0 +1,28 @@
+{% extends  "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+<h1>Editar perfil</h1>    
+{% endblock %}
+
+{% block contenido %}
+
+<h3>Usuario: {{usuario}}</h3>
+
+    <form action="{% url 'editarPerfil' %}" method="POST">
+        {% csrf_token %}
+
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+  
+
+        <br> 
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% block seccion %}
+    <h1>Registrarse</h1>    
+{% endblock %}
+
+{% block contenido %}
+
+
+    <h2 class="text-center">Ingrese sus datos</h2>
+
+
+    <form action="" method="POST" class="container">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <button class="btn btn-primary">Iniciar</button>
+
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+    <h1>All about me</h1> 
+    <br>   
+    <h2>Candela Prado</h2>   
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <!-- FILA 1-->
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'AppColegio/assets/img/candela.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">¡Hola a todos!</h5>
+                      <p class="card-text">Me llamo Candela y tengo 30 años. Soy profesora de Inglés y hice los cursos de Data Analytics y Python en Coderhouse. Actualmente trabajo en Accenture como Security Delivery Analyst. Me gusta ir a la playa, viajar, y seguir estudiando para poder crecer tanto profesionalmente como personalmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="{% url 'inicio' %}" class="btn btn-primary">Inicio</a> 
+{% endblock %}

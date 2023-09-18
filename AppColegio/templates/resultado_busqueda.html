@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block seccion %}
+    <h1>Resultado de la búsqueda</h1>
+    
+{% endblock %}
+
+{% block contenido %}
+
+    {% if alumnos %}
+
+    <ul>
+    {% for alumno in alumnos %}
+        <li>Nombre: {{alumno.nombre}}</li>
+        <li>Apellido: {{alumno.apellido}}</li>
+        <li>Email: {{alumno.email}}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No se encontró el alumno</p>
+    {% endif %}
+
+{% endblock %}
